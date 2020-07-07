@@ -5,7 +5,7 @@ Python web scraper designed to return Cox Communications internet usage data
 
 ## Usage
 
-You can run the tool from the container using prebuilt Docker image. The container has 1 mount point:
+You can run the tool from the container using [prebuilt Docker image](https://hub.docker.com/r/ntalekt/coxusage). The container has 1 mount point:
 -  ``/data`` this is where the output will be stored.
 
 You also need to create an enviroment file (e.g. secret/cox.env) with the following contents
