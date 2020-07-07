@@ -1,4 +1,7 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import json
 import datetime
 import calendar
@@ -22,9 +25,8 @@ driver = webdriver.Chrome(options=chrome_options)
 print("[+] Getting Login page")
 driver.get('https://www.cox.com/content/dam/cox/okta/login.html')
 print("[+] Waiting for fields to load")
-time.sleep(5)
 
-username = driver.find_element_by_id("okta-signin-username")
+username = WebDriverWait(driver, 60).until(EC.visibility_of_element_located((By.ID, 'okta-signin-username')))
 password = driver.find_element_by_id("okta-signin-password")
 
 username.send_keys(cox_user)
