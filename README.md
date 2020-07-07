@@ -32,13 +32,27 @@ Personally I like to run it via cron (my personal example) ::
 
 ## Home Assistant Card Example
 ![Alt text](/img/HA_Example.JPG?raw=true)
+```
+title: Cox Internet Usage
+type: entities
+entities:
+  - entity: sensor.cox_utilization
+    icon: mdi:percent
+  - entity: sensor.cox_time_left
+    icon: mdi:calendar-clock
+  - entity: sensor.cox_avg_gb_current
+    icon: mdi:chart-line
+  - entity: sensor.cox_avg_gb_remaining
+    icon: mdi:chart-line-stacked
+show_header_toggle: false
+```
 
 ### Sensor Component
 -----
 ```
 sensor:
   - platform: command_line
-    command: cal -h $(date +"%m %Y") | awk 'NF {DAYS = $NF}; END {print DAYS}'
+    command: cal $(date +"%m %Y") | awk 'NF {DAYS = $NF}; END {print DAYS}'
     name: Days In Current Month
     scan_interval: 3600
 
