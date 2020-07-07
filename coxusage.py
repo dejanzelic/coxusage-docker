@@ -9,8 +9,8 @@ now = datetime.datetime.now()
 
 cox_user = os.getenv('COX_USER')
 cox_pass = os.environ.get('COX_PASSWORD')
-json_file_location = os.getenv('JSON_LOCATION').strip()
-json_file = f"{json_file_location}"
+json_filename = os.getenv('JSON_FILENAME').strip()
+json_file = f"/data/{json_filename}"
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-sandbox')
