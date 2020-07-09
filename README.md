@@ -13,7 +13,6 @@ You also need to create an enviroment file (e.g. secret/cox.env) with the follow
 ```
 COX_USER=username
 COX_PASSWORD=password
-
 JSON_LOCATION=coxusage.json
 ```
 
@@ -115,5 +114,3 @@ sensor:
         undefined
       {% endif %}
 ```
-
-
