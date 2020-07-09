@@ -13,10 +13,11 @@ You also need to create an enviroment file (e.g. secret/cox.env) with the follow
 ```
 COX_USER=username
 COX_PASSWORD=password
-JSON_LOCATION=/data/coxusage.json
+
+JSON_LOCATION=coxusage.json
 ```
 
-To run ::
+To run:
 
     docker run \
        -ti \
