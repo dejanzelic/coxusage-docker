@@ -1,6 +1,5 @@
 # coxusage-docker
 
-
 Python web scraper designed to return Cox Communications internet usage data
 
 ## Usage
@@ -13,10 +12,10 @@ You also need to create an enviroment file (e.g. secret/cox.env) with the follow
 ```
 COX_USER=username
 COX_PASSWORD=password
-JSON_LOCATION=coxusage.json
+JSON_LOCATION=/data/coxusage.json
 ```
 
-To run:
+To run ::
 
     docker run \
        -ti \
@@ -24,7 +23,7 @@ To run:
 	   --env-file /YOUR_LOCAL/PATH/TO_ENV/cox.env \
        -v /YOUR_LOCAL/PATH/TO_OUTPUT:/data \
        ntalekt/coxusage
-	   
+
 Personally I like to run it via cron (my personal example) ::
 ```
 0 0 * * * /usr/bin/docker run --rm --name coxusage --env-file /mnt/nas2/coxusage-docker/config/cox.env -v /mnt/nas2/coxusage-docker/output:/data ntalekt/coxusage > /dev/null 2>&1
