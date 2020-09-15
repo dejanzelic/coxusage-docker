@@ -3,7 +3,7 @@
 ## Build
 
 ```
-docker build -t dejandayoff/coxusage .
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t dejandayoff/coxusage:dev --push .
 ```
 
 ## Usage
@@ -23,3 +23,5 @@ JSON_FILENAME=coxusage.json
 
 ## Pro Tips
 Run the container daily in your crontab!
+
+Check out: https://github.com/ntalekt/coxusage-docker For examples of integrating into Home Assistant
