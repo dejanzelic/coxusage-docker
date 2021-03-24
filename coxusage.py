@@ -20,7 +20,7 @@ chrome_options.add_argument('--disable-gpu')
 print("[+] Starting Chrome")
 driver = webdriver.Chrome(options=chrome_options)
 print("[+] Getting Login page")
-driver.get('https://www.cox.com/content/dam/cox/okta/login.html')
+driver.get('https://www.cox.com/content/dam/cox/okta/signin.html')
 print("[+] Waiting for fields to load")
 time.sleep(5)
 
