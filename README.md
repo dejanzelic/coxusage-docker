@@ -1,3 +1,5 @@
+**It looks like Cox started to use "Incapsula" to block requests. This means that this script no longer works. Cox is actively making it more difficult for us to check out data caps. Please join me in contacting cox and requesting that they create and API endpoint for us to be able to obtain usage metrics.**
+
 # coxusage-docker
 
 ## Build
