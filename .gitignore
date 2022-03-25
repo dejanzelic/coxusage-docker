@@ -1,2 +1,3 @@
 secret/
-output/coxusage.json
+output/
+.env/
